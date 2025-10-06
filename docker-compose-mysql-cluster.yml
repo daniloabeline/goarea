@@ -1,0 +1,102 @@
+version: '3.8'
+
+services:
+  mysql-master:
+    image: mysql:8.0
+    container_name: mysql-master
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_REPLICATION_USER: replicator
+      MYSQL_REPLICATION_PASSWORD: replicatorpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./config/master/my.cnf:/etc/mysql/my.cnf
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - mysql_master_data:/var/lib/mysql
+    command: --server-id=1 --log-bin=mysql-bin --binlog-format=ROW --gtid-mode=ON --enforce-gtid-consistency=ON
+    networks:
+      - mysql-cluster
+    restart: unless-stopped
+
+  mysql-slave1:
+    image: mysql:8.0
+    container_name: mysql-slave1
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./config/slave1/my.cnf:/etc/mysql/my.cnf
+      - mysql_slave1_data:/var/lib/mysql
+    command: --server-id=2 --relay-log=mysql-relay-bin --gtid-mode=ON --enforce-gtid-consistency=ON
+    depends_on:
+      - mysql-master
+    networks:
+      - mysql-cluster
+    restart: unless-stopped
+
+  mysql-slave2:
+    image: mysql:8.0
+    container_name: mysql-slave2
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "3308:3306"
+    volumes:
+      - ./config/slave2/my.cnf:/etc/mysql/my.cnf
+      - mysql_slave2_data:/var/lib/mysql
+    command: --server-id=3 --relay-log=mysql-relay-bin --gtid-mode=ON --enforce-gtid-consistency=ON
+    depends_on:
+      - mysql-master
+    networks:
+      - mysql-cluster
+    restart: unless-stopped
+
+  # ProxySQL para balanceamento de carga
+  proxysql:
+    image: proxysql/proxysql:2.5.5
+    container_name: proxysql
+    ports:
+      - "6033:6033"  # Porta do ProxySQL
+      - "6032:6032"  # Porta administrativa
+    volumes:
+      - ./config/proxysql/proxysql.cnf:/etc/proxysql.cnf
+      - proxysql_data:/var/lib/proxysql
+    depends_on:
+      - mysql-master
+      - mysql-slave1
+      - mysql-slave2
+    networks:
+      - mysql-cluster
+    restart: unless-stopped
+
+  # phpMyAdmin para administração
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: mysql-master
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: rootpassword
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql-master
+    networks:
+      - mysql-cluster
+    restart: unless-stopped
+
+volumes:
+  mysql_master_data:
+  mysql_slave1_data:
+  mysql_slave2_data:
+  proxysql_data:
+
+networks:
+  mysql-cluster:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
