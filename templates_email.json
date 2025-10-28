@@ -1,0 +1,85 @@
+{
+  "templates": {
+    "boas_vindas": {
+      "assunto": "Bem-vindo(a) à nossa plataforma!",
+      "html": "<h1>Bem-vindo(a), {{nome}}!</h1><p>Seja muito bem-vindo(a) à nossa plataforma!</p><p>Seu login: {{email}}</p><p>Data de cadastro: {{data_cadastro}}</p><a href='{{link_acesso}}'>Acessar Minha Conta</a>",
+      "texto": "Bem-vindo(a), {{nome}}!\n\nSeja muito bem-vindo(a) à nossa plataforma!\n\nSeu login: {{email}}\nData de cadastro: {{data_cadastro}}\n\nAcesse sua conta: {{link_acesso}}",
+      "variaveis": ["nome", "email", "data_cadastro", "link_acesso"]
+    },
+    "confirmacao_pedido": {
+      "assunto": "Confirmação de Pedido #{{numero_pedido}}",
+      "html": "<h2>Pedido Confirmado!</h2><p>Olá {{nome}},</p><p>Seu pedido foi confirmado e está sendo processado.</p><div><strong>Resumo do Pedido:</strong><br>Produto: {{produto}}<br>Quantidade: {{quantidade}}<br>Valor: {{valor}}<br>Data: {{data_pedido}}</div><a href='{{link_rastreamento}}'>Acompanhar Pedido</a>",
+      "texto": "PEDIDO CONFIRMADO!\n\nOlá {{nome}},\n\nSeu pedido foi confirmado e está sendo processado.\n\nRESUMO DO PEDIDO:\n- Produto: {{produto}}\n- Quantidade: {{quantidade}}\n- Valor: {{valor}}\n- Data: {{data_pedido}}\n\nAcompanhar pedido: {{link_rastreamento}}",
+      "variaveis": ["nome", "numero_pedido", "produto", "quantidade", "valor", "data_pedido", "link_rastreamento"]
+    },
+    "newsletter": {
+      "assunto": "Newsletter Semanal - {{titulo_newsletter}}",
+      "html": "<h2>Newsletter Semanal</h2><p>Olá {{nome}},</p><p>Confira as principais novidades desta semana:</p><h3>Destaques</h3><ul>{{destaques}}</ul><a href='{{link_ler_mais}}'>Ler Mais</a>",
+      "texto": "NEWSLETTER SEMANAL\n\nOlá {{nome}},\n\nConfira as principais novidades desta semana:\n\nDESTAQUES:\n{{destaques}}\n\nLer mais: {{link_ler_mais}}",
+      "variaveis": ["nome", "titulo_newsletter", "destaques", "link_ler_mais"]
+    },
+    "recuperacao_senha": {
+      "assunto": "Recuperação de Senha - {{nome_empresa}}",
+      "html": "<h2>Recuperação de Senha</h2><p>Olá {{nome}},</p><p>Recebemos uma solicitação para redefinir a senha da sua conta.</p><p>Clique no botão abaixo para criar uma nova senha:</p><a href='{{link_reset}}'>Redefinir Senha</a><p><strong>Importante:</strong> Este link expira em {{tempo_expiracao}} por motivos de segurança.</p>",
+      "texto": "RECUPERAÇÃO DE SENHA\n\nOlá {{nome}},\n\nRecebemos uma solicitação para redefinir a senha da sua conta.\n\nClique no link abaixo para criar uma nova senha:\n{{link_reset}}\n\nIMPORTANTE: Este link expira em {{tempo_expiracao}} por motivos de segurança.",
+      "variaveis": ["nome", "nome_empresa", "link_reset", "tempo_expiracao"]
+    },
+    "promocao": {
+      "assunto": "🎉 {{titulo_promocao}} - {{desconto}} OFF por tempo limitado!",
+      "html": "<h2>Oferta Especial!</h2><p>Olá {{nome}},</p><p>Que tal aproveitar nossa oferta especial?</p><div style='background-color: #fff3cd; padding: 15px; border-left: 4px solid #ffc107;'><h3>🔥 PROMOÇÃO RELÂMPAGO</h3><p>{{desconto}} de desconto em todos os produtos!</p><p><strong>Válido até: {{data_limite}}</strong></p></div><a href='{{link_promocao}}'>Aproveitar Oferta</a>",
+      "texto": "OFERTA ESPECIAL!\n\nOlá {{nome}},\n\nQue tal aproveitar nossa oferta especial?\n\n🔥 PROMOÇÃO RELÂMPAGO\n{{desconto}} de desconto em todos os produtos!\nVálido até: {{data_limite}}\n\nAproveitar oferta: {{link_promocao}}",
+      "variaveis": ["nome", "titulo_promocao", "desconto", "data_limite", "link_promocao"]
+    },
+    "lembrete": {
+      "assunto": "Lembrete: {{evento}} é {{tempo_evento}}!",
+      "html": "<h2>Lembrete de Evento</h2><p>Olá {{nome}},</p><p>Este é um lembrete de que você tem um evento agendado:</p><div><strong>EVENTO:</strong> {{evento}}<br><strong>DATA:</strong> {{data}}<br><strong>HORA:</strong> {{hora}}<br><strong>LOCAL:</strong> {{local}}</div><a href='{{link_confirmacao}}'>Confirme sua presença</a>",
+      "texto": "LEMBRETE DE EVENTO\n\nOlá {{nome}},\n\nEste é um lembrete de que você tem um evento agendado:\n\nEVENTO: {{evento}}\nDATA: {{data}}\nHORA: {{hora}}\nLOCAL: {{local}}\n\nConfirme sua presença: {{link_confirmacao}}",
+      "variaveis": ["nome", "evento", "tempo_evento", "data", "hora", "local", "link_confirmacao"]
+    },
+    "convite": {
+      "assunto": "Você está convidado(a) para {{evento}}!",
+      "html": "<h2>Convite Especial</h2><p>Olá {{nome}},</p><p>Temos o prazer de convidá-lo(a) para nosso evento especial:</p><div><strong>EVENTO:</strong> {{evento}}<br><strong>DATA:</strong> {{data}}<br><strong>HORA:</strong> {{hora}}<br><strong>LOCAL:</strong> {{local}}</div><p>Confirme sua presença até {{data_limite}}.</p><a href='{{link_aceitar}}'>Aceitar convite</a> | <a href='{{link_recusar}}'>Recusar</a>",
+      "texto": "CONVITE ESPECIAL\n\nOlá {{nome}},\n\nTemos o prazer de convidá-lo(a) para nosso evento especial:\n\nEVENTO: {{evento}}\nDATA: {{data}}\nHORA: {{hora}}\nLOCAL: {{local}}\n\nConfirme sua presença até {{data_limite}}.\n\nAceitar convite: {{link_aceitar}}\nRecusar: {{link_recusar}}",
+      "variaveis": ["nome", "evento", "data", "hora", "local", "data_limite", "link_aceitar", "link_recusar"]
+    },
+    "feedback": {
+      "assunto": "Como foi sua experiência conosco?",
+      "html": "<h2>Sua Opinião é Importante</h2><p>Olá {{nome}},</p><p>Esperamos que tenha tido uma excelente experiência!</p><p>Sua opinião é muito importante para nós. Que tal nos contar como foi?</p><a href='{{link_avaliacao}}'>Avaliar experiência</a><p>Obrigado por escolher nossos serviços!</p>",
+      "texto": "SUA OPINIÃO É IMPORTANTE\n\nOlá {{nome}},\n\nEsperamos que tenha tido uma excelente experiência!\n\nSua opinião é muito importante para nós. Que tal nos contar como foi?\n\nAvaliar experiência: {{link_avaliacao}}\n\nObrigado por escolher nossos serviços!",
+      "variaveis": ["nome", "link_avaliacao"]
+    },
+    "notificacao": {
+      "assunto": "Nova {{tipo_notificacao}} em sua conta",
+      "html": "<h2>Nova Notificação</h2><p>Olá {{nome}},</p><p>Você recebeu uma nova {{tipo_notificacao}} em sua conta.</p><div><strong>{{tipo_notificacao}}:</strong> {{titulo}}<br><strong>De:</strong> {{remetente}}<br><strong>Data:</strong> {{data_hora}}</div><a href='{{link_visualizar}}'>Ver {{tipo_notificacao}}</a>",
+      "texto": "NOVA NOTIFICAÇÃO\n\nOlá {{nome}},\n\nVocê recebeu uma nova {{tipo_notificacao}} em sua conta.\n\n{{tipo_notificacao}}: {{titulo}}\nDe: {{remetente}}\nData: {{data_hora}}\n\nVer {{tipo_notificacao}}: {{link_visualizar}}",
+      "variaveis": ["nome", "tipo_notificacao", "titulo", "remetente", "data_hora", "link_visualizar"]
+    },
+    "cancelamento": {
+      "assunto": "Confirmação de cancelamento",
+      "html": "<h2>Cancelamento Confirmado</h2><p>Olá {{nome}},</p><p>Confirmamos o cancelamento da sua {{tipo_assinatura}}.</p><div><strong>Detalhes do cancelamento:</strong><br>Data do cancelamento: {{data_cancelamento}}<br>Motivo: {{motivo}}<br>Último acesso: {{ultimo_acesso}}</div><p>Sua conta permanecerá ativa até {{data_final}}.</p><p>Se mudar de ideia, você pode reativar sua conta a qualquer momento.</p><a href='{{link_reativar}}'>Reativar conta</a>",
+      "texto": "CANCELAMENTO CONFIRMADO\n\nOlá {{nome}},\n\nConfirmamos o cancelamento da sua {{tipo_assinatura}}.\n\nDetalhes do cancelamento:\n- Data do cancelamento: {{data_cancelamento}}\n- Motivo: {{motivo}}\n- Último acesso: {{ultimo_acesso}}\n\nSua conta permanecerá ativa até {{data_final}}.\n\nSe mudar de ideia, você pode reativar sua conta a qualquer momento.\n\nReativar conta: {{link_reativar}}",
+      "variaveis": ["nome", "tipo_assinatura", "data_cancelamento", "motivo", "ultimo_acesso", "data_final", "link_reativar"]
+    }
+  },
+  "configuracoes": {
+    "remetente_padrao": "noreply@exemplo.com",
+    "nome_remetente": "Sua Empresa",
+    "assinatura_padrao": "Atenciosamente,\nEquipe de Suporte\nSua Empresa",
+    "rodape_padrao": {
+      "texto": "Este email foi enviado automaticamente. Para cancelar o recebimento, clique aqui.",
+      "link_descadastro": "https://exemplo.com/descadastrar",
+      "copyright": "© 2024 Sua Empresa. Todos os direitos reservados.",
+      "contato": "contato@exemplo.com | (11) 99999-9999"
+    }
+  },
+  "dicas_uso": [
+    "Substitua as variáveis {{variavel}} pelos valores reais",
+    "Teste os emails em diferentes provedores (Gmail, Outlook, etc.)",
+    "Verifique se todos os links estão funcionando",
+    "Use imagens com texto alternativo",
+    "Teste em dispositivos móveis",
+    "Mantenha o tamanho do email abaixo de 100KB",
+    "Use cores que contrastem bem com o texto",
+    "Inclua sempre um link de descadastro"
+  ]
+}

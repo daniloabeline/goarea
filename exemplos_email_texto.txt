@@ -1,0 +1,226 @@
+EXEMPLOS DE EMAILS TESTE - FORMATO TEXTO
+
+===============================================
+1. EMAIL DE BOAS-VINDAS
+===============================================
+
+Assunto: Bem-vindo(a) à nossa plataforma!
+
+Olá [Nome],
+
+Seja muito bem-vindo(a) à nossa plataforma! Estamos muito felizes em tê-lo(a) conosco.
+
+Para começar, aqui estão algumas informações importantes:
+- Seu login: [email]
+- Data de cadastro: [data]
+- Status da conta: Ativa
+
+Acesse sua conta: https://exemplo.com/login
+
+Se você tiver alguma dúvida, não hesite em nos contatar.
+
+Atenciosamente,
+Equipe de Suporte
+
+===============================================
+2. EMAIL DE CONFIRMAÇÃO DE PEDIDO
+===============================================
+
+Assunto: Confirmação de Pedido #12345
+
+Olá [Nome],
+
+Recebemos seu pedido e ele está sendo processado!
+
+RESUMO DO PEDIDO:
+- Produto: [Nome do Produto]
+- Quantidade: 1
+- Valor: R$ 99,90
+- Data: [Data do Pedido]
+
+Você receberá um email com o código de rastreamento assim que o pedido for enviado.
+
+Acompanhar pedido: https://exemplo.com/rastreamento/12345
+
+===============================================
+3. EMAIL DE NEWSLETTER
+===============================================
+
+Assunto: Newsletter Semanal - Dicas e Novidades
+
+Olá [Nome],
+
+Confira as principais novidades desta semana:
+
+DESTAQUES:
+- Novo recurso lançado: [Descrição]
+- Dica da semana: [Dica útil]
+- Próximos eventos: [Lista de eventos]
+
+Ler mais: https://exemplo.com/newsletter
+
+Obrigado por ser nosso assinante!
+
+===============================================
+4. EMAIL DE RECUPERAÇÃO DE SENHA
+===============================================
+
+Assunto: Recuperação de Senha - [Nome da Empresa]
+
+Olá [Nome],
+
+Recebemos uma solicitação para redefinir a senha da sua conta.
+
+Clique no link abaixo para criar uma nova senha:
+https://exemplo.com/reset-password?token=abc123
+
+IMPORTANTE: Este link expira em 24 horas por motivos de segurança.
+
+Se você não solicitou esta alteração, ignore este email.
+
+===============================================
+5. EMAIL DE PROMOÇÃO
+===============================================
+
+Assunto: 🎉 Oferta Especial - 50% OFF por tempo limitado!
+
+Olá [Nome],
+
+Que tal aproveitar nossa oferta especial?
+
+🔥 PROMOÇÃO RELÂMPAGO
+50% de desconto em todos os produtos!
+Válido até: [Data limite]
+
+Aproveitar oferta: https://exemplo.com/promocao
+
+Não perca esta oportunidade única!
+
+===============================================
+6. EMAIL DE LEMBRETE
+===============================================
+
+Assunto: Lembrete: Seu evento é amanhã!
+
+Olá [Nome],
+
+Este é um lembrete de que você tem um evento agendado:
+
+EVENTO: [Nome do Evento]
+DATA: [Data]
+HORA: [Horário]
+LOCAL: [Endereço]
+
+Confirme sua presença: https://exemplo.com/confirmar
+
+Até amanhã!
+
+===============================================
+7. EMAIL DE CONVITE
+===============================================
+
+Assunto: Você está convidado(a) para [Evento]!
+
+Olá [Nome],
+
+Temos o prazer de convidá-lo(a) para nosso evento especial:
+
+EVENTO: [Nome do Evento]
+DATA: [Data]
+HORA: [Horário]
+LOCAL: [Endereço]
+
+Confirme sua presença até [Data limite].
+
+Aceitar convite: https://exemplo.com/aceitar
+Recusar: https://exemplo.com/recusar
+
+Esperamos vê-lo(a) lá!
+
+===============================================
+8. EMAIL DE FEEDBACK
+===============================================
+
+Assunto: Como foi sua experiência conosco?
+
+Olá [Nome],
+
+Esperamos que tenha tido uma excelente experiência!
+
+Sua opinião é muito importante para nós. Que tal nos contar como foi?
+
+Avaliar experiência: https://exemplo.com/avaliar
+
+Obrigado por escolher nossos serviços!
+
+===============================================
+9. EMAIL DE NOTIFICAÇÃO
+===============================================
+
+Assunto: Nova mensagem em sua conta
+
+Olá [Nome],
+
+Você recebeu uma nova mensagem em sua conta.
+
+Mensagem de: [Remetente]
+Assunto: [Assunto da mensagem]
+Data: [Data e hora]
+
+Ver mensagem: https://exemplo.com/mensagens
+
+===============================================
+10. EMAIL DE CANCELAMENTO
+===============================================
+
+Assunto: Confirmação de cancelamento
+
+Olá [Nome],
+
+Confirmamos o cancelamento da sua assinatura.
+
+Detalhes do cancelamento:
+- Data do cancelamento: [Data]
+- Motivo: [Motivo informado]
+- Último acesso: [Data]
+
+Sua conta permanecerá ativa até [Data final].
+
+Se mudar de ideia, você pode reativar sua conta a qualquer momento.
+
+Reativar conta: https://exemplo.com/reativar
+
+Obrigado por ter sido nosso cliente!
+
+===============================================
+
+DICAS PARA EMAILS EFETIVOS:
+
+1. ASSUNTO CLARO E DIRETO
+   - Use palavras-chave relevantes
+   - Evite spam words
+   - Seja específico sobre o conteúdo
+
+2. SAUDAÇÃO PERSONALIZADA
+   - Use o nome do destinatário
+   - Escolha o tom adequado (formal/informal)
+
+3. CORPO DO EMAIL
+   - Seja conciso e objetivo
+   - Use parágrafos curtos
+   - Destaque informações importantes
+
+4. CHAMADA PARA AÇÃO (CTA)
+   - Botão ou link claro
+   - Texto persuasivo
+   - Fácil de encontrar
+
+5. RODAPÉ
+   - Informações de contato
+   - Link para descadastro
+   - Dados da empresa
+
+6. TESTES
+   - Teste em diferentes dispositivos
+   - Verifique links e imagens
+   - Teste com diferentes provedores de email
